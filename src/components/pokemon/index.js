@@ -4,7 +4,7 @@ import './pokemon.css';
 
 const Pokemon = ({ pokemon }) => (
   <div className="pokemon">
-
+    {pokemon}
   </div>
 );
 

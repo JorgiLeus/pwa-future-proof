@@ -8,7 +8,7 @@ const PAGE_SIZE = 10;
 class PokeService {
   constructor() {
       this.http = Axios.create({
-        baseURL: BASE_URL
+        baseURL: BASE_URL + "/pokemon/"
       });
       this.http.interceptors.response.use(response => response.data);
   }

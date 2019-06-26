@@ -9,6 +9,9 @@ import './pokemon-container.css';
 
 const PokemonContainer = () => {
 
+  let pokemons = PokeService.getPokemons();
+  console.log(pokemons)
+
   return (
     <div className="pokemon-container">
 
