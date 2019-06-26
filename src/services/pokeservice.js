@@ -8,7 +8,7 @@ const PAGE_SIZE = 10;
 class PokeService {
   constructor() {
       this.http = Axios.create({
-        baseURL: BASE_URL + "/pokemon/"
+        baseURL: BASE_URL
       });
       this.http.interceptors.response.use(response => response.data);
   }
@@ -19,7 +19,7 @@ class PokeService {
       .pipe(switchMap(pokemons => of(...pokemons)))
       .pipe(mergeMap(pokemon => this.getPokemon(pokemon.name)))
       .pipe(toArray())
-      .toPromise(result => console.log(result));
+      .toPromise();
   }
 
   getPokemon(id) {
