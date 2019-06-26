@@ -19,7 +19,7 @@ class PokeService {
       .pipe(switchMap(pokemons => of(...pokemons)))
       .pipe(mergeMap(pokemon => this.getPokemon(pokemon.name)))
       .pipe(toArray())
-      .toPromise();
+      .toPromise(result => console.log(result));
   }
 
   getPokemon(id) {

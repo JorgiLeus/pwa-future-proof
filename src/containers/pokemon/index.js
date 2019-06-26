@@ -14,7 +14,9 @@ const PokemonContainer = () => {
 
   return (
     <div className="pokemon-container">
-
+      <Loader/>
+      <Pokemon />
+      <Pagination/>
     </div>
   )
 };
